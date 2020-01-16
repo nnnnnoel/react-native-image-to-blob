@@ -10,7 +10,7 @@ export interface ImageType {
   uri: string;
 }
 
-export default async function imageToBlob(image: ImageType) {
+export async function imageToBlob(image: ImageType) {
   const resizedImage = await ImageResizer
     .createResizedImage(
       image.uri,
@@ -29,3 +29,4 @@ export default async function imageToBlob(image: ImageType) {
   return response.blob();
 }
 
+export default imageToBlob;
