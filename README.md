@@ -17,7 +17,8 @@
 ## Getting Started
 
 ```shell script
-npm install --save react-native-image-to-blob
+npm install --save react-native-image-to-blob react-native-image-resizer
+cd ios && pod install
 ```
 
 ## Usage
