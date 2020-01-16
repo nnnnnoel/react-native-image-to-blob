@@ -10,7 +10,7 @@
 
 ### It can get blob from react native image uri.
 
-## That universals link can't get blob
+## That universal links can't get blob
 - rct-image-store
 - asset-library
 
