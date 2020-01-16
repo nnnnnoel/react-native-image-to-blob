@@ -1,5 +1,5 @@
-import { Platform } from 'react-native';
-import ImageResizer from 'react-native-image-resizer';
+import { Platform } from "react-native";
+import ImageResizer from "react-native-image-resizer";
 
 export interface ImageType {
   playableDuration?: number;
@@ -11,18 +11,17 @@ export interface ImageType {
 }
 
 export async function imageToBlob(image: ImageType) {
-  const resizedImage = await ImageResizer
-    .createResizedImage(
-      image.uri,
-      image.width,
-      image.height,
-      'JPEG',
-      100,
-    );
-  const url = Platform.OS === 'android' ? resizedImage.uri : resizedImage.path;
+  const resizedImage = await ImageResizer.createResizedImage(
+    image.uri,
+    image.width,
+    image.height,
+    "JPEG",
+    100
+  );
+  const url = Platform.OS === "android" ? resizedImage.uri : resizedImage.path;
 
   const init: RequestInit = {
-    method: 'GET',
+    method: "GET"
   };
 
   const response = await fetch(url, init);
