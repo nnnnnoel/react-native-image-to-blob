@@ -1,0 +1,40 @@
+{
+  "name": "react-native-image-to-blob",
+  "version": "0.0.1",
+  "description": "it can get Blob from image url",
+  "main": "index.ts",
+  "keywords": [
+    "react-native",
+    "image",
+    "blob",
+    "camera roll",
+    "uri to blob",
+    "image to blob",
+    "get blob",
+    "shinpei"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Minhyuk Kim",
+    "email": "react-native@kakao.com",
+    "url": "https://github.com/zusinShinpei"
+  },
+  "homepage": "https://github.com/zusinShinpei/react-native-image-to-blob",
+  "bugs": {
+    "url": "https://github.com/zusinShinpei/react-native-image-to-blob/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-native": "^0.61.5",
+    "react-native-image-resizer": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.30",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
+  }
+}
