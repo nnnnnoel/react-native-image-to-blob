@@ -10,7 +10,7 @@ export interface ImageType {
   uri: string;
 }
 
-export async function imageToBlob(image: ImageType) {
+export async function imageToBlob(image: ImageType): Promise<Blob> {
   const resizedImage = await ImageResizer.createResizedImage(
     image.uri,
     image.width,
@@ -18,14 +18,16 @@ export async function imageToBlob(image: ImageType) {
     "JPEG",
     100
   );
-  const url = Platform.OS === "android" ? resizedImage.uri : resizedImage.path;
 
-  const init: RequestInit = {
-    method: "GET"
+  return {
+    // @ts-ignore
+    name: resizedImage.name || image.filename || "image.jpg",
+    uri: resizedImage.uri.replace(
+      "file://",
+      Platform.OS === "android" ? "file://" : ""
+    ),
+    type: "image/jpeg"
   };
-
-  const response = await fetch(url, init);
-  return response.blob();
 }
 
 export default imageToBlob;
